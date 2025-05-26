@@ -1,0 +1,125 @@
+<p>calculadora works!</p>
+
+<!--<p>Num1:</p>
+<input type="number" [(ngModel)]="num1">>
+<p>Num2:</p>
+<input type="number" [(ngModel)]="num2">
+
+<input type="button" value="Sumar" (click)="operar('+')" >
+<input type="button" value="Resta" (click)="operar('-')" >
+<input type="button" value="Multiplicar" (click)="operar('*')" >
+<input type="button" value="Dividir" (click)="operar('/')" >
+<p>Num1:{{num1}}  {{oper}}  Num2:{{num2}}  Resultado:  {{result}}</p>
+-->
+  <!--<div id="calculadora">
+  <div>
+    <input type="text" [(ngModel)]="pantalla" disabled />
+
+
+  </div>
+    <div class ="botones">
+      <button (click)="precionarBoton('7')" >7</button>
+      <button (click)="precionarBoton('8')" >8</button>
+      <button (click)="precionarBoton('9')" >9</button>
+      <button (click)="precionarBoton('/')" >/</button>
+
+      <button (click)="precionarBoton('4')" >4</button>
+      <button (click)="precionarBoton('5')" >5</button>
+      <button (click)="precionarBoton('6')" >6</button>
+      <button (click)="precionarBoton('*')" >*</button>
+
+      <button (click)="precionarBoton('1')" >1</button>
+      <button (click)="precionarBoton('2')" >2</button>
+      <button (click)="precionarBoton('3')" >3</button>
+      <button (click)="precionarBoton('+')" >+</button>
+
+      <button (click)="precionarBoton('0')" >0</button>
+      <button (click)="precionarBoton('=')" >=</button>
+      <button (click)="precionarBoton('.')" >.</button>
+      <button (click)="precionarBoton('-')" >-</button>
+
+
+      <button (click)="precionarBoton('AC')" class="clear" >AC</button>
+
+
+    </div>
+
+
+  </div>-->
+
+<div id="calculadora">
+  <!-- Prueba de Bootstrap -->
+  <button class="btn btn-primary">Botón de prueba</button>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+
+        <div class="card shadow">
+          <div class="card-header text-center bg-primary text-white">
+            <h4>Calculadora</h4>
+          </div>
+
+          <div class="card-body">
+            <input
+              type="text"
+              [(ngModel)]="pantalla"
+              class="form-control mb-3 text-end"
+              disabled
+            />
+
+            <div class="d-grid gap-2">
+              <div class="row mb-2">
+                <div class="col"><button class="btn btn-outline-secondary w-100" (click)="precionarBoton('7')">7</button></div>
+                <div class="col"><button class="btn btn-outline-secondary w-100" (click)="precionarBoton('8')">8</button></div>
+                <div class="col"><button class="btn btn-outline-secondary w-100" (click)="precionarBoton('9')">9</button></div>
+                <div class="col"><button class="btn btn-warning w-100" (click)="precionarBoton('/')">/</button></div>
+              </div>
+
+              <div class="row mb-2">
+                <div class="col"><button class="btn btn-outline-secondary w-100" (click)="precionarBoton('4')">4</button></div>
+                <div class="col"><button class="btn btn-outline-secondary w-100" (click)="precionarBoton('5')">5</button></div>
+                <div class="col"><button class="btn btn-outline-secondary w-100" (click)="precionarBoton('6')">6</button></div>
+                <div class="col"><button class="btn btn-warning w-100" (click)="precionarBoton('*')">*</button></div>
+              </div>
+
+              <div class="row mb-2">
+                <div class="col"><button class="btn btn-outline-secondary w-100" (click)="precionarBoton('1')">1</button></div>
+                <div class="col"><button class="btn btn-outline-secondary w-100" (click)="precionarBoton('2')">2</button></div>
+                <div class="col"><button class="btn btn-outline-secondary w-100" (click)="precionarBoton('3')">3</button></div>
+                <div class="col"><button class="btn btn-warning w-100" (click)="precionarBoton('-')">-</button></div>
+              </div>
+
+              <div class="row mb-2">
+                <div class="col"><button class="btn btn-outline-secondary w-100" (click)="precionarBoton('0')">0</button></div>
+                <div class="col"><button class="btn btn-outline-secondary w-100" (click)="precionarBoton('.')">.</button></div>
+                <div class="col"><button class="btn btn-success w-100" (click)="precionarBoton('=')">=</button></div>
+                <div class="col"><button class="btn btn-warning w-100" (click)="precionarBoton('+')">+</button></div>
+              </div>
+
+              <button class="btn btn-danger w-100" (click)="precionarBoton('AC')">AC</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div>
+    <input type="text" [(ngModel)]="pantalla" disabled />
+
+
+  </div>
+  <div class ="botones">
+    <button
+      *ngFor="let boton of bottons"
+      (click)="precionarBoton(boton)"
+      [ngClass]="{'clear':boton==='AC'}"
+    >{{boton}}</button>
+
+  </div>
+
+
+</div>
+
